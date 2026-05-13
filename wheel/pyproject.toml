@@ -1,0 +1,12 @@
+[build-system]
+requires = ["setuptools", "wheel","sly"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "advanced-math-calculator-operating-system"
+version = "0.2.1"
+description = "A operating system for advanced math calculations"
+authors = [{name = "Jaeden Duncan"},{name = "Jaeden Duncan",email = "jaedenduncan34210@gmail.com"}]
+
+[project.scripts]
+amcos = "amcos.amcOS:main"

@@ -1,0 +1,7 @@
+pyproject.toml
+advanced_math_calculator_operating_system.egg-info/PKG-INFO
+advanced_math_calculator_operating_system.egg-info/SOURCES.txt
+advanced_math_calculator_operating_system.egg-info/dependency_links.txt
+advanced_math_calculator_operating_system.egg-info/entry_points.txt
+advanced_math_calculator_operating_system.egg-info/top_level.txt
+amcos/amcOS.py

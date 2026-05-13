@@ -1,4 +1,5 @@
 from sly import Lexer, Parser
+from time import sleep
 
 class CalcLexer(Lexer):
     # Set of token names (required)
@@ -73,11 +74,23 @@ class CalcParser(Parser):
 if __name__ == '__main__':
     lexer = CalcLexer()
     parser = CalcParser()
-    file = input("load:")
-    while file == "":
-        text = input("dons:")
-        parser.parse(lexer.tokenize(text))
-    with open(file,"r") as dons:
-        code = dons.read().split("\n")
-        for c in code:
-            parser.parse(lexer.tokenize(c))
+    version = "v"+"0.2.1"
+    intro = ("welcome to amcOS the system that does advance math(can even do 5^5^5),welcome to advanced-math-calculator-operating-system,"+version).split(",")
+    for line in intro:
+        for l in line:
+            print(l,end="",flush=True)
+            sleep(0.1)
+        print("")
+    while True:
+        file = input("load:")
+        while file == "":
+            text = input("amcOS>")
+            for l in "loading...":
+                print(l,end="",flush=True)
+                sleep(0.1)
+            print()
+            parser.parse(lexer.tokenize(text))
+        with open(file,"r") as amc:
+            code = amc.read().split("\n")
+            for c in code:
+                parser.parse(lexer.tokenize(c))
